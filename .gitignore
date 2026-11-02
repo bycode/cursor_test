@@ -1,0 +1,87 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Node / frontend
+node_modules/
+apps/web/dist/
+apps/web/.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local runtime data / sample images (do not publish site photos)
+data/images/*
+!data/images/.gitkeep
+data/inbox/*
+!data/inbox/.gitkeep
+data/inbox/done/*
+!data/inbox/done/.gitkeep
+data/real/
+data/sample.jpg
+data/*.jpg
+data/*.jpeg
+data/*.png
+data/*.webp
+*.db
+*.sqlite
+*.sqlite3
+apps/api/data/
+
+# Cabin train / Label Studio / model artifacts
+tools/cabin-train/runs/
+tools/cabin-train/raw_images/**
+!tools/cabin-train/raw_images/.gitkeep
+tools/cabin-train/ls_export_*/
+tools/cabin-train/dataset/images/**/*
+!tools/cabin-train/dataset/images/**/.gitkeep
+tools/cabin-train/dataset/labels/**/*
+!tools/cabin-train/dataset/labels/**/.gitkeep
+tools/project-*.zip
+*.pt
+*.onnx
+*.engine
+!tools/cabin-train/.gitkeep
+yolov8*.pt
+ultralytics/
+
+# Secrets / local config
+.env
+.env.*
+!.env.example
+apps/api/.env
+*.pem
+*.key
+credentials*.json
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs / temp
+*.log
+tmp/
+temp/
+.cache/

@@ -1,0 +1,112 @@
+.task-detail {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--space-sm);
+  height: 100%;
+  padding: var(--space-sm);
+}
+
+.task-detail__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.task-detail__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.task-detail__id {
+  font-family: var(--font-mono);
+  color: var(--color-text-secondary);
+}
+
+.image-stage {
+  position: relative;
+  min-height: 280px;
+  background: oklch(0.14 0.02 250);
+  border: 1px solid var(--color-border);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.image-stage__img {
+  max-width: 100%;
+  max-height: 56vh;
+  display: block;
+}
+
+.image-stage__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.image-stage__empty {
+  color: var(--color-text-tertiary);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.image-stage__legend {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.legend-key {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.legend-key--alarm {
+  background: var(--color-alarm-box);
+}
+
+.legend-key--detect {
+  background: var(--color-detect-box);
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-detect-box) 0 4px,
+    transparent 4px 8px
+  );
+}
+
+.detection-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.detection-table th {
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2xs) var(--space-xs);
+}
+
+.detection-table td {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2xs) var(--space-xs);
+}

@@ -1,0 +1,24 @@
+services:
+  api:
+    build:
+      context: ./apps/api
+    ports:
+      - "8000:8000"
+    environment:
+      DETECTOR_BACKEND: stub
+      DATABASE_URL: sqlite:///./data/verify.db
+      IMAGES_DIR: data/images
+      INBOX_DIR: data/inbox
+      SCAN_INTERVAL_SECONDS: "5"
+      SERVE_WEB: "false"
+    volumes:
+      - ./data/images:/app/data/images
+      - ./data/inbox:/app/data/inbox
+
+  web:
+    build:
+      context: ./apps/web
+    ports:
+      - "5173:80"
+    depends_on:
+      - api

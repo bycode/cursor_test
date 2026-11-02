@@ -1,0 +1,7 @@
+# Install ONLY into repo .venv:
+#   .\.venv\Scripts\python.exe -m pip install -r tools/cabin-train/requirements.txt
+ultralytics>=8.1
+opencv-python-headless>=4.8
+pyyaml>=6.0
+pillow>=10.0
+tqdm>=4.66
