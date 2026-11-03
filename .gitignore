@@ -50,11 +50,13 @@ tools/cabin-train/runs/
 tools/cabin-train/raw_images/**
 !tools/cabin-train/raw_images/.gitkeep
 tools/cabin-train/ls_export_*/
+tools/cabin-train/_export_staging/
 tools/cabin-train/dataset/images/**/*
 !tools/cabin-train/dataset/images/**/.gitkeep
 tools/cabin-train/dataset/labels/**/*
 !tools/cabin-train/dataset/labels/**/.gitkeep
 tools/project-*.zip
+tools/project-*/
 *.pt
 *.onnx
 *.engine
